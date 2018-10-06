@@ -10,7 +10,7 @@ accept, if any, and return an appropriate IActionResult:
 
     public class CustomerPage : PageModel
 	                          , IPageGetAsync
-							  , IPagePostAsync<Customer>
+	                          , IPagePostAsync<Customer>
 	{
 		public IActionResult OnGet()
 		{
