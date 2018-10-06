@@ -9,7 +9,7 @@ Using this, you can declaratively specify what parameters these methods
 accept, if any, and return an appropriate IActionResult:
 
     public class CustomerPage : PageModel
-	                          , IPageGetAsync
+	                          , IPageGet
 	                          , IPagePostAsync<Customer>
 	{
 		public IActionResult OnGet()
