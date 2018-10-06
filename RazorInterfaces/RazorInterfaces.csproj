@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-RC1</Version>
+    <Authors>Sandro Magi</Authors>
+    <Description>A set of interfaces ensuring correct implementations of the HTTP methods used by Razor Pages.</Description>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/naasking/RazorInterfaces</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/naasking/RazorInterfaces</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Interfaces.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Interfaces.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Interfaces.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Interfaces.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Interfaces.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Interfaces.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
